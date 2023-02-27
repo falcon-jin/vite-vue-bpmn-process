@@ -2,7 +2,7 @@ import { ViewerOptions } from 'diagram-js/lib/model'
 import { ModuleDeclaration } from 'didi'
 
 export interface EditorSettings {
-  language: string
+  language: string //语言
   processName: string
   processId: string
   processEngine: 'flowable' | 'activiti' | 'camunda'
