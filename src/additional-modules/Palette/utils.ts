@@ -9,6 +9,7 @@ export function createAction(
   title: string,
   options?: Object
 ) {
+  //创建监听器
   function createListener(event) {
     const shape = elementFactory.createShape(assign({ type: type }, options))
 

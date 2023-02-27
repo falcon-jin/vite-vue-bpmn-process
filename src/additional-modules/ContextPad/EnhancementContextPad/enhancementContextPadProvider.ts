@@ -12,6 +12,9 @@ import Rules from 'diagram-js/lib/features/rules/Rules'
 import { Translate } from 'diagram-js/lib/i18n/translate'
 import { Base, Shape } from 'diagram-js/lib/model'
 
+/**
+ * 扩展元素上下文
+ */
 class EnhancementContextPadProvider extends ContextPadProvider {
   constructor(
     config: any,

@@ -12,6 +12,9 @@ import Rules from 'diagram-js/lib/features/rules/Rules'
 import { Translate } from 'diagram-js/lib/i18n/translate'
 import { Base } from 'diagram-js/lib/model'
 
+/**
+ * 重写元素上下文
+ */
 class RewriteContextPadProvider extends ContextPadProvider {
   constructor(
     config: any,
