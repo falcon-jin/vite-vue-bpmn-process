@@ -3,14 +3,14 @@ import { ModuleDeclaration } from 'didi'
 
 export interface EditorSettings {
   language: string //语言
-  processName: string
-  processId: string
-  processEngine: 'flowable' | 'activiti' | 'camunda'
-  paletteMode: 'default' | 'custom' | 'rewrite' | 'enhancement'
-  penalMode: 'default' | 'custom' | 'rewrite'
-  contextPadMode: 'default' | 'rewrite' | 'enhancement'
-  rendererMode: 'default' | 'rewrite' | 'enhancement'
-  bg: string
+  processName: string //流程名称
+  processId: string //流程id
+  processEngine: 'flowable' | 'activiti' | 'camunda' //流程处理器 默认flowable
+  paletteMode: 'default' | 'custom' | 'rewrite' | 'enhancement' //调色版模式
+  penalMode: 'default' | 'custom' | 'rewrite' //
+  contextPadMode: 'default' | 'rewrite' | 'enhancement' //内容面板模式
+  rendererMode: 'default' | 'rewrite' | 'enhancement' //渲染模式 图标边框样式
+  bg: string //背景
   toolbar: boolean
   miniMap: boolean
   contextmenu: boolean

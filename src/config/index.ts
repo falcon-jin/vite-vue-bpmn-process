@@ -5,7 +5,7 @@ export const defaultSettings: EditorSettings = {
   language: defaultLang,
   processId: `Process_${new Date().getTime()}`,
   processName: `业务流程`,
-  processEngine: 'camunda',
+  processEngine: 'flowable',
   paletteMode: 'enhancement',
   penalMode: 'custom',
   contextPadMode: 'enhancement',
