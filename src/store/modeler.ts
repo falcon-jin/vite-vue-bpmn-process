@@ -7,15 +7,22 @@ import Canvas from 'diagram-js/lib/core/Canvas'
 import ElementRegistry from 'diagram-js/lib/core/ElementRegistry'
 
 type ModelerStore = {
+  //当前激活的元素
   activeElement: Base | undefined
+  //当前激活元素id
   activeElementId: string | undefined
+  //模型
   modeler: Modeler | null
+  //模型声明对象
   moddle: Moddle | null
+  //计划modeling
   modeling: Modeling | null
+  //画布对象
   canvas: Canvas | null
+  //元素注册表
   elementRegistry: ElementRegistry | null
 }
-
+//默认配置
 const defaultState: ModelerStore = {
   activeElement: undefined,
   activeElementId: undefined,

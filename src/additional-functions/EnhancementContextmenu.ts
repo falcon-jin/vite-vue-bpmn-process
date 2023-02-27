@@ -33,7 +33,7 @@ export default function (modeler: Modeler) {
   })
 }
 
-// default replace popupMenu
+// 默认替换弹出菜单
 function openPopupMenu(modeler: Modeler, element: Base, event: MouseEvent) {
   const popupMenu = modeler.get<PopupMenu>('popupMenu')
   if (popupMenu && !popupMenu.isEmpty(element, 'bpmn-replace')) {
@@ -53,7 +53,7 @@ function openPopupMenu(modeler: Modeler, element: Base, event: MouseEvent) {
   }
 }
 
-// templateChooser enhancement replace popupMenu
+// templateChooser 增强替换 popupMenu
 function openEnhancementPopupMenu(modeler: Modeler, element: Base, event: MouseEvent) {
   const replaceMenu: any = modeler.get('replaceMenu')
   if (replaceMenu) {
@@ -61,7 +61,7 @@ function openEnhancementPopupMenu(modeler: Modeler, element: Base, event: MouseE
   }
 }
 
-///// utils
+//获取弹出位置
 function getContextMenuPosition(event: MouseEvent, offset?: boolean): Position {
   return {
     x: event.clientX + (offset ? 10 : 0),

@@ -9,6 +9,7 @@ export default function () {
   let elementFactory
   let create
 
+  //更改元素
   function replaceAction(target, currentElement) {
     if (!replaceElement) {
       replaceElement = modelerStore.getModeler!.get<BpmnReplace>('bpmnReplace').replaceElement
@@ -16,6 +17,7 @@ export default function () {
     replaceElement(currentElement, target)
   }
 
+  //创建元素
   function appendAction(target, event) {
     if (!elementFactory) {
       elementFactory = modelerStore.getModeler!.get<ElementFactory>('elementFactory')

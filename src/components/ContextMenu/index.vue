@@ -43,11 +43,14 @@
 
   let mouseEvent: MouseEvent | null = null
   let currentElement: Base | null = null
+  //是不是追加元素
   const isAppend = ref<boolean>(false)
+  //弹窗标题
   const contextMenuTitle = ref<string>('创建元素')
-
+  //右键菜单事件
   const { appendAction, replaceAction } = contextMenuActions()
 
+  //触发事件
   const triggerAction = (entry, event) => {
     try {
       isAppend.value
@@ -59,6 +62,7 @@
     }
   }
 
+  //初始化右键点击事件回调
   const initEventCallback = (event: MouseEvent, element?: Base) => {
     x.value = event.clientX
     y.value = event.clientY
@@ -70,13 +74,16 @@
     showPopover.value = true
   }
 
+  //关闭弹框
   const closePopover = () => (showPopover.value = false)
 
+  //挂载是绑定点击事件
   onMounted(() => {
     EventEmitter.on('show-contextmenu', initEventCallback)
     document.body.addEventListener('click', closePopover)
   })
 
+  //组件卸载前执行 移除相关事件
   onBeforeUnmount(() => {
     EventEmitter.removeListener('show-contextmenu', initEventCallback)
     document.body.removeEventListener('click', closePopover)
